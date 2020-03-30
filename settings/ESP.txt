@@ -11,6 +11,10 @@ ENABLE_ADRENALINE = false
 //Enable radar esp
 RADAR_ESP = false
 
+//VK Key Code (http://cherrytree.at/misc/vk.htm), toggles radar esp on/off
+//Default key id V
+RADAR_ESP_TOGGLE_KEY = 86
+
 //Enable audible hitsound
 //Activates on enemy hit
 ENABLE_HITSOUND = false

@@ -36,6 +36,8 @@ class VisualsTab : Tab(false, false) {
     val visualsToggleKey = VisInputFieldCustom("Visuals Toggle Key", "VISUALS_TOGGLE_KEY")
 
     val radarEsp = VisCheckBoxCustom("Radar Esp", "RADAR_ESP")
+    val radarESPKey = VisCheckBoxCustom("Radar ESP Triggerkey", "RADAR_TRIGGER_KEY")
+    val radarESPToggleKey = VisInputFieldCustom("Radar Esp Toggle Key", "RADAR_ESP_TOGGLE_KEY")
     val visAdrenaline = VisCheckBoxCustom("Adrenaline", "ENABLE_ADRENALINE")
 
     init {
@@ -106,6 +108,8 @@ class VisualsTab : Tab(false, false) {
         table.add(enableEsp).padLeft(25F).left().row()
         table.add(visualsToggleKey).padLeft(25F).left().row()
         table.add(radarEsp).padLeft(25F).left().row()
+        table.add(radarESPKey).padLeft(25F).left().row()
+        table.add(radarESPToggleKey).padLeft(25F).left().row()
         table.add(visAdrenaline).padLeft(25F).left().row()
         table.add(espTabbedPane.table).minWidth(500F).left().row()
         table.add(espScrollPane).minSize(500F, 500F).prefSize(500F, 500F).align(Align.left).growX().growY().row()
@@ -142,6 +146,8 @@ fun updateDisableEsp() {
 
         visualsToggleKey.disable(bool, col)
         radarEsp.disable(bool)
+        radarESPKey.disable(bool)
+        radarESPToggleKey.disable(bool, col)
         visAdrenaline.disable(bool)
 
         val recTab = espTabbedPane.activeTab
@@ -267,6 +273,8 @@ fun visualsTabUpdate() {
         enableEsp.update()
         visualsToggleKey.update()
         radarEsp.update()
+        radarESPKey.update()
+        radarESPToggleKey.update()
         visualsToggleKey.update()
     }
 }
